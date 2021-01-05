@@ -16,7 +16,8 @@ class Produk extends Model
         'deskripsi',
         'img',
         'link_btn',
-        'kategori_id'
+        'kategori_id',
+        'display'
     ];
 
     public function data_kategori()

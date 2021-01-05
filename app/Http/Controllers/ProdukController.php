@@ -106,6 +106,7 @@ class ProdukController extends Controller
         $produk->link_btn = $request->link_btn;
         $produk->deskripsi = $request->deskripsi;
         $produk->kategori_id = $request->kategori_id;
+        $produk->display = $request->display;
 
         if($request->file('img')){
             if($produk->img && file_exists(storage_path('app/public/' . $produk->img))){

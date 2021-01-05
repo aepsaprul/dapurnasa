@@ -14,9 +14,10 @@ class WelcomeController extends Controller
      */
     public function index()
     {
-        $produks = Produk::orderBy('id', 'desc')->simplePaginate(10);
+        $pertanians = Produk::where('display', 1)->where('kategori_id', 3)->get();
+        $peternakans = Produk::where('display', 1)->where('kategori_id', 4)->get();
 
-        return view('welcome.index', ['produks' => $produks]);
+        return view('welcome.index', ['pertanians' => $pertanians, 'peternakans' => $peternakans]);
     }
 
     /**

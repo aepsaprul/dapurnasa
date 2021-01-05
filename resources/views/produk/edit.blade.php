@@ -60,7 +60,7 @@
     <img src="{{asset('storage/'.$produk->img)}}" width="120px" />
     <br>
   @else
-    No avatar
+    Gambar Kosong
   @endif
   <br>  
   <div class="form-group">
@@ -73,6 +73,16 @@
     <label for="deskripsi">Deskripsi</label>
     <textarea id="summernote" name="deskripsi">{{ $produk->deskripsi }}</textarea>
   </div>
+  
+  <div class="form-group">
+    <label for="display">Tampil</label>
+    <select name="display" id="display" class="form-control">
+      <option value="">--Tampilkan--</option>
+      <option value="0" {{ $produk->display == 0 ? 'selected' : '' }} >Tidak</option>
+      <option value="1" {{ $produk->display == 1 ? 'selected' : '' }} >Ya</option>
+    </select>
+  </div>
+
   <div class="text-center"><button type="submit" class="btn btn-primary">Simpan</button></div>
 </form>
 

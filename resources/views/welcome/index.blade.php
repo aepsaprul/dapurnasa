@@ -35,30 +35,49 @@
     </div>
   </footer> --}}
 
-  <!-- ======= Produk Section ======= -->
+  <!-- ======= Produk Pertanian ======= -->
 
   <section id="custom" class="custom">
     <div class="section-title">
-      <h2>produk</h2>
+      <h2>produk pertanian</h2>
     </div>
     <div class="custom-produk">
-      @foreach ($produks as $key => $produk)
+      @foreach ($pertanians as $key => $pertanian)
         <div class="custom-content">
           <div class="header">
-            <a href="{{ route('welcome.show', [$produk->id]) }}"><img src="{{ asset('storage/' . $produk->img) }}" style="max-width:100%;height:auto;"></a>
-            <div class="harga">Rp. {{ rupiah($produk->harga) }}</div>
-            <div class="varian"><a href="{{ route('welcome.show', [$produk->id]) }}">{{ $produk->varian }}</a></div>
+            <a href="{{ route('welcome.show', [$pertanian->id]) }}"><img src="{{ asset('storage/' . $pertanian->img) }}" style="max-width:100%;height:auto;"></a>
+            <div class="harga">Rp. {{ rupiah($pertanian->harga) }}</div>
+            <div class="varian"><a href="{{ route('welcome.show', [$pertanian->id]) }}">{{ $pertanian->varian }}</a></div>
             <div class="tombol">
-              <a href="https://wa.me/6285728012440?text={{ $produk->link_btn }}" class="beli">Beli</a>
+              <a href="https://wa.me/6285728012440?text={{ $pertanian->link_btn }}" class="beli">Beli</a>
             </div>
             <div style="clear: both;"></div>
           </div>
         </div>
       @endforeach
     </div>
-    <div style="clear: both;"></div>
-    <div class="custom-paginate">
-      <center>{{ $produks->links() }}</center>
+  </section>
+
+  <!-- ======= Produk Peternakan ======= -->
+
+  <section id="custom" class="custom">
+    <div class="section-title">
+      <h2>produk peternakan</h2>
+    </div>
+    <div class="custom-produk">
+      @foreach ($peternakans as $key => $peternakan)
+        <div class="custom-content">
+          <div class="header">
+            <a href="{{ route('welcome.show', [$peternakan->id]) }}"><img src="{{ asset('storage/' . $peternakan->img) }}" style="max-width:100%;height:auto;"></a>
+            <div class="harga">Rp. {{ rupiah($peternakan->harga) }}</div>
+            <div class="varian"><a href="{{ route('welcome.show', [$peternakan->id]) }}">{{ $peternakan->varian }}</a></div>
+            <div class="tombol">
+              <a href="https://wa.me/6285728012440?text={{ $peternakan->link_btn }}" class="beli">Beli</a>
+            </div>
+            <div style="clear: both;"></div>
+          </div>
+        </div>
+      @endforeach
     </div>
   </section>
 
@@ -93,17 +112,17 @@
 
         <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="200">
           <div class="box featured">
-            <img src="{{ asset('assets/img/16.jpg') }}" alt="" style="max-width: 100%;">
+            <img src="{{ asset('assets/img/testi1.jpg') }}" alt="" style="max-width: 100%;">
           </div>
         </div>
         <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="200">
           <div class="box featured">
-            <img src="{{ asset('assets/img/13.jpg') }}" alt="" style="max-width: 100%;">
+            <img src="{{ asset('assets/img/testi2.jpg') }}" alt="" style="max-width: 100%;">
           </div>
         </div>
         <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="200">
           <div class="box featured">
-            <img src="{{ asset('assets/img/9.jpg') }}" alt="" style="max-width: 100%;">
+            <img src="{{ asset('assets/img/testi3.jpg') }}" alt="" style="max-width: 100%;">
           </div>
         </div>
 
